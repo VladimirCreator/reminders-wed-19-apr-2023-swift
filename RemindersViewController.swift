@@ -10,6 +10,16 @@ final class RemindersViewController: UIViewController {
         self.tableView.delegate = self
         self.view = tableView
     }
+    
+    // MARK: Life Cycle
+    
+    final public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 
     final public override func viewDidLoad() {
         super.viewDidLoad()
