@@ -1,4 +1,4 @@
-final class Reminder {
+struct Reminder {
     var title: String
     var subtitle: String
     var isDone: Bool
