@@ -29,6 +29,8 @@ final class RemindersViewController: UIViewController {
     }
 }
 
+// MARK: `UITableViewDataSource`
+
 extension RemindersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: nil)
@@ -41,6 +43,8 @@ extension RemindersViewController: UITableViewDataSource {
         return 0x01
     }
 }
+
+// MARK: `UITableViewDelegate`
 
 extension RemindersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
