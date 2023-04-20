@@ -20,6 +20,12 @@ final class RemindersViewController: UIViewController {
             self.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+    
+    final public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.tableView.flashScrollIndicators()
+    }
 
     final public override func viewDidLoad() {
         super.viewDidLoad()
