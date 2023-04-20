@@ -47,3 +47,11 @@ extension RemindersViewController: UITableViewDelegate {
         print("The method is not implemented.")
     }
 }
+
+// MARK: `UINavigationControllerDelegate`
+
+extension RemindersViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        print("The method is not implemented.")
+    }
+}
