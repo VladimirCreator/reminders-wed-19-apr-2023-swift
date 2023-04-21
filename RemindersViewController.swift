@@ -6,7 +6,7 @@ final class RemindersViewController: UIViewController {
     final public override func loadView() {
         self.tableView = UITableView(frame: .infinite, style: .plain)
 
-        self.tableView.dataSource = self
+        self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.view = tableView
     }
@@ -35,17 +35,20 @@ final class RemindersViewController: UIViewController {
     }
 }
 
-// MARK: `UITableViewDataSource`
+// MARK: `UICollectionViewDataSource`
 
-extension RemindersViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: nil)
+extension RemindersViewController: UICollectionViewDataSource= {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { cell, indexPath, itemIdentifier in
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = "This closue is not implemented."
 
-        cell.textLabel?.text = "The method is not implemented."
-        return cell
+            cell.contentConfiguration = contentConfiguration
+        }
+        return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: 0)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0x01
     }
 }
