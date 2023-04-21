@@ -43,14 +43,6 @@ final class RemindersViewController: UIViewController {
     }
 }
 
-// MARK: `UICollectionViewDelegate`
-
-extension RemindersViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // ...
-    }
-}
-
 // MARK: `UINavigationControllerDelegate`
 
 extension RemindersViewController: UINavigationControllerDelegate {
