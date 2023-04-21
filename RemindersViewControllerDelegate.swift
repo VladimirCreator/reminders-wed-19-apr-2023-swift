@@ -15,3 +15,9 @@ extension RemindersViewController: UICollectionViewDelegate {
         // ...
     }
 }
+
+// MARK: `UITabBarDelegate`
+
+extension RemindersViewController: UITabBarDelegate {
+    // ...
+}
