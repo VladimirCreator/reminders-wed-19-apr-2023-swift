@@ -42,11 +42,3 @@ final class RemindersViewController: UIViewController {
         self.collectionView.flashScrollIndicators()
     }
 }
-
-// MARK: `UINavigationControllerDelegate`
-
-extension RemindersViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        print("The method is not implemented.")
-    }
-}
