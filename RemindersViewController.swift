@@ -7,7 +7,7 @@ final class RemindersViewController: UIViewController {
         self.tableView = UITableView(frame: .infinite, style: .plain)
 
         self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.collectionView.delegate = self
         self.view = tableView
     }
     
@@ -50,11 +50,11 @@ extension RemindersViewController: UITableViewDataSource {
     }
 }
 
-// MARK: `UITableViewDelegate`
+// MARK: `UICollectionViewDelegate`
 
-extension RemindersViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("The method is not implemented.")
+extension RemindersViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // ...
     }
 }
 
