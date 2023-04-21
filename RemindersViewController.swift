@@ -1,7 +1,7 @@
 import UIKit
 
 final class RemindersViewController: UIViewController {
-    private var tableView: UITableView!
+    private var collectionView: UICollectionView!
 
     final public override func loadView() {
         self.tableView = UITableView(frame: .infinite, style: .plain)
