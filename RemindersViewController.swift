@@ -2,6 +2,7 @@ import UIKit
 
 final class RemindersViewController: UIViewController {
     private var collectionView: UICollectionView!
+    private var segmentedControl: UISegmentedControl!
 
     final public override func loadView() {
         let collectionViewLayout = {
@@ -11,7 +12,7 @@ final class RemindersViewController: UIViewController {
             return collectionViewLayout
         }()
         self.collectionView = UICollectionView(frame: .null, collectionViewLayout: collectionViewLayout)
-
+        self.segmentedControl = UISegmentedControl(frame: .null)
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.view = collectionView
