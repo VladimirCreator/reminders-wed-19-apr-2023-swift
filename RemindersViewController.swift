@@ -1,6 +1,6 @@
 import UIKit
 
-final class RemindersViewController: UIViewController {
+internal final class RemindersViewController: UIViewController {
     private var collectionView: UICollectionView!
     private var segmentedControl: UISegmentedControl!
 
