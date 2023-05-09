@@ -1,10 +1,20 @@
 import UIKit
 
+// MARK:- `RemindersViewController`
+
 internal final class RemindersViewController: UIViewController {
+
+    // MARK:- ...
+
     private var collectionView: UICollectionView!
     private var segmentedControl: UISegmentedControl!
 
-    final public override func loadView() {
+    // MARK:- `UIViewController`
+
+    // MARK: Life Cycle
+
+    // MARK: `loadView`
+    public final override func loadView() {
         let collectionViewLayout = {
             let collectionViewLayoutConfiguration = UICollectionLayoutListConfiguration(appearance: .plain)
             let collectionViewLayout = UICollectionViewCompositionalLayout.list(using: viewLayoutConfiguration)
@@ -17,10 +27,9 @@ internal final class RemindersViewController: UIViewController {
         self.collectionView.delegate = self
         self.view = collectionView
     }
-    
-    // MARK: Life Cycle
-    
-    final public override func viewDidLoad() {
+
+    // MARK: `viewDidLoad`
+    public final override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationController?.delegate = self
@@ -29,7 +38,8 @@ internal final class RemindersViewController: UIViewController {
         self.title = "Reminders"
     }
 
-    final public override func viewWillAppear(_ animated: Bool) {
+    // MARK: `viewWillAppear`
+    public final override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         collectionView.indexPathsForSelectedItems?.forEach { indexPath in
@@ -37,7 +47,8 @@ internal final class RemindersViewController: UIViewController {
         }
     }
 
-    final public override func viewDidAppear(_ animated: Bool) {
+    // MARK: `viewDidAppear`
+    public final override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         self.collectionView.flashScrollIndicators()
