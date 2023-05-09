@@ -1,8 +1,8 @@
 import UIKit
 
-// MARK:- `RemindersViewController`
+// MARK:- `UIReminderTableViewController`
 
-internal final class RemindersViewController: UIViewController {
+internal final class UIReminderTableViewController: UIViewController {
 
     // MARK:- ...
 
@@ -35,7 +35,7 @@ internal final class RemindersViewController: UIViewController {
         self.navigationController?.delegate = self
         self.navigationController?.navigationBar.prefersLargeTitles = true
 
-        self.title = "Reminders"
+        self.title = "Reminder View Controller"
     }
 
     // MARK: `viewWillAppear`
