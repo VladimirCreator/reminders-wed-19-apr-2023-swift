@@ -6,8 +6,8 @@ internal final class RemindersViewController: UIViewController {
 
     // MARK:- ...
 
-    private var collectionView: UICollectionView!
-    private var segmentedControl: UISegmentedControl!
+    private final var collectionView: UICollectionView!
+    private final var segmentedControl: UISegmentedControl!
 
     // MARK:- `UIViewController`
 
