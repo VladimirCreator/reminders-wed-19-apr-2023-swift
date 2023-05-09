@@ -1,7 +1,14 @@
 import UIKit
 
+// MARK:- `UIApplicationDelegate`
+
 final class RemindersDelegate: UIResponder, UIApplicationDelegate {
+
+    // MARK:- ...
+
     var windows: UIWindow?
+
+    // MARK:- `UIApplicationDelegate`
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window?.rootViewController = UINavigationController(rootViewController: RemindersViewController())
