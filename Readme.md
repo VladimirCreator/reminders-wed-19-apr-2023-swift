@@ -6,3 +6,6 @@
 4. [`./UIReminderTableViewControllerDataSource.swift`](./UIReminderTableViewControllerDataSource.swift)
 5. [`./UIReminderTableViewControllerDelegate.swift`](./UIReminderTableViewControllerDelegate.swift)
 6. [`./UIReminderViewController.swift`](./UIReminderViewController.swift)
+
+## Quick Look
+![Reminders](./gif/quick_look.gif)
