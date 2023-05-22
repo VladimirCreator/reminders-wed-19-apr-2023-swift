@@ -2,6 +2,7 @@ import UIKit
 
 // MARK:- `UIApplicationDelegate`
 
+@main
 internal final class RemindersDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK:- ...
